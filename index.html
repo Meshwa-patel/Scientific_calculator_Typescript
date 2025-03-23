@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <i class="fa-solid fa-circle-half-stroke"></i>
+    <div class="calculator">
+        <div class="display">
+            <i class="fa-regular fa-clock"></i>
+            <i class="fa-solid fa-calculator" style="display: none;"></i>
+            <input type="text" id="input">
+            <div id="result"></i></div>
+        </div>
+        <div class="buttons">
+            <button id="nd" value="nd">2<sup>nd</sup></button>
+            <button id="pi" value="π">&pi;</button>
+            <button id="e" value="e">e</button>
+            <button id="clear" value="cl">C</button>
+            <button id="backspace" value="bs"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="square" value="^2">x<sup>2</sup></button>
+            <button id="sin" value="sin(">sin</button>
+            <button id="cos" value="cos(">cos</button>
+            <button id="tan" value="tan(">tan</button>
+            <button id="percent" value="%">%</button>
+            <button id="sqrt" value="√(">&radic;x</button>
+            <button id="open-paren" value="(">&lpar;</button>
+            <button id="close-paren" value=")"> &rpar;</button>
+            <button id="factorial" value="!">n&excl;</button>
+            <button id="divide" value="/"> &divide;</button>
+            <button id="power" value="^(">x<sup>y</sup></button>
+            <button id="seven" class="numbers" value="7">7</button>
+            <button id="eight" class="numbers" value="8">8</button>
+            <button id="nine" class="numbers" value="9">9</button>
+            <button id="multiply" value="x">&times;</button>
+            <button id="abs" value="abs(">|x|</button>
+            <button id="four" class="numbers" value="4">4</button>
+            <button id="five" class="numbers" value="5">5</button>
+            <button id="six" class="numbers" value="6">6</button>
+            <button id="minus" value="-">&minus;</button>
+            <button id="log" value="log(">log</button>
+            <button id="one" class="numbers" value="1">1</button>
+            <button id="two" class="numbers" value="2">2</button>
+            <button id="three" class="numbers" value="3">3</button>
+            <button id="plus" value="+">&plus;</button>
+            <button id="ln" value="ln(">ln</button>
+            <button id="negate" value="(-"><sup>+</sup>/-</button>
+            <button id="zero" class="numbers" value="0">0</button>
+            <button id="decimal" value=".">.</button>
+            <button id="equals" value="=">&equals;</button>
+        </div>
+        <div class="history-view" style="display:none;">
+            <hr>
+            <div id="history-content"></div>
+            <button id="clear-history">Clear History</button>
+        </div>
+    </div>
+    <script type="module" src="./build/script/app.js"></script>
+    <script>
+        document.getElementById("equals").style.backgroundColor = "lightblue";
+        const numberButtons = document.querySelectorAll('.numbers');
+        numberButtons.forEach(button => {
+            button.style.backgroundColor = 'white';
+        });
+    </script>
+</body>
+</html>
